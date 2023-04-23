@@ -19,7 +19,7 @@ class Program
         Random rand = new Random();
         int rand_value = rand.Next();
 
-        if (num_guess != rand_value)
+        while (num_guess != rand_value)
         {
             if (num_guess > rand_value)
             {
@@ -30,6 +30,14 @@ class Program
                 Console.WriteLine("Too Low!");
 
             }
+
+            Console.WriteLine("Oops, that's wrong, try again! : "); //Get new input from user
+
+            string while_guess = Console.ReadLine();
+
+            int int_while_guess;
+
+            int_while_guess = (Convert.ToInt32(while_guess)); //Type cast it to be an integer
 
         }
     }
