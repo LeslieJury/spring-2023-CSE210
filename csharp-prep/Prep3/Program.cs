@@ -17,7 +17,9 @@ class Program
 
         // Instantiate random number generator
         Random rand = new Random();
-        int rand_value = rand.Next();
+        
+        int rand_value = rand.Next(1, 101);
+        Console.WriteLine(rand_value);
 
         while (num_guess != rand_value)
         {
@@ -33,12 +35,13 @@ class Program
 
             Console.WriteLine("Oops, that's wrong, try again! : "); //Get new input from user
 
-            string while_guess = Console.ReadLine();
+            your_guess = Console.ReadLine();
 
-            int int_while_guess;
+            
 
-            int_while_guess = (Convert.ToInt32(while_guess)); //Type cast it to be an integer
+            num_guess = (Convert.ToInt32(your_guess)); //Type cast it to be an integer
 
         }
+        Console.WriteLine("Congratulations! You guessed correctly!")
     }
 }
