@@ -15,5 +15,7 @@ quoteboard.ShowQuotes();
 quoteboard.GetRandomQuote();
 quoteboard.FindQuotesByAuthor("holland");
 
-Menu menu = new Menu(_board);
-_menu.Display();
+
+//Add Entry
+//Display Entries
+//Load Entries

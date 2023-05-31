@@ -1,13 +1,13 @@
-public class Quote
+public class Entry
 {
     private string _author = "";
-    private string _quote = "";
+    private string _entry = "";
     private Source _source;
 
-    public Quote(string person, string quote, Source source)
+    public Entry(string person, string entry, Source source)
     {
         _author = person;
-        _quote = quote;
+        _entry = entry;
         _source = source;
 
     }
@@ -22,9 +22,9 @@ public class Quote
         return false;
     }
 
-    public string GetQuote()
+    public string GetEntry()
     {
-        return $"\"{_quote}\"\n{_author} - {_source.Stringify()}";
+        return $"\"{_entry}\"\n{_author} - {_source.Stringify()}";
 
     }
 

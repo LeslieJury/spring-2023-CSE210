@@ -14,7 +14,7 @@ public class Menu
         {
             while(options.Contains(response)==false)
             {
-                Console.Write("[A]dd quote\n[S]how quotes\n[F]ind Quote by author\n[R]andom Quote\n[Q]uit\n\nWhat do you want to do?: ");
+                Console.Write("[A]dd entry\n[S]how entries\n[F]ind Quote by author\n[R]andom entry\n[Q]uit\n\nWhat do you want to do?: ");
                 response = Console.ReadLine() ?? String.Empty;
                 response = response.ToUpper();
             }
@@ -24,7 +24,7 @@ public class Menu
                     Environment.Exit(0);
                     break;
                 case "A":
-                    Console.WriteLine("please enter your quote: ");
+                    Console.WriteLine("please enter your new entry: ");
                     string quote = Console.ReadLine() ?? String.Empty;
                     Console.WriteLine("Please enter your author ");
                     string author = Console.ReadLine() ?? String.Empty;

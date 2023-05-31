@@ -11,6 +11,5 @@ public class Entry
         _response = response;
         _dateText = dateText;
         _delimeter = delimeter;
-
     }
 }
