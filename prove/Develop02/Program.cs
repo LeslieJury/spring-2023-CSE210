@@ -7,7 +7,7 @@ public class Program
 {
     private static Journal journal;
     private static Prompt prompt;
-
+    private static Menu menu;
 
 
     public static void Main(string[] args)
@@ -18,7 +18,12 @@ public class Program
         bool exit = false;
         while (exit ==  false)
         {
+            Console.WriteLine(menu);
+            Console.WriteLine("\nSelect which you'd like: ");
+            string userInput = Console.ReadLine();
+
             
+
 
         }
     }
