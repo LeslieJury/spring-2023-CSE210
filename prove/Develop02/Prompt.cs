@@ -13,21 +13,15 @@ public class Prompt
 
     private void InitializePrompts()
     {
-        prompts.Add("What made you feel happy today?");
-        prompts.Add("What goal did you work on today?");
-        prompts.Add("Who did you meet today?");
-        prompts.Add("How was your family?");
-        prompts.Add("How did you help someone else today?");
+        prompts.Add("What is something you did that made you feel happy today?");
+        prompts.Add("What is one interesting thing you've experienced or seen today?");
+        prompts.Add("Did you see any friends or family today?");
+        prompts.Add("Name your favorite childhood toy and why.");
     }
 
 
     public string Random()
     {
-        if (prompts.Count == 0)
-        {
-            return "No prompts available.";
-        }
-
         Random random = new Random();
         int index = random.Next(prompts.Count);
         return prompts[index];
@@ -35,7 +29,7 @@ public class Prompt
 
     public void Add()
     {
-        Console.Write("Enter a new prompt: ");
+        Console.Write("Add a new prompt?: ");
         string newPrompt = Console.ReadLine();
         prompts.Add(newPrompt);
         Console.WriteLine("Prompt added successfully.");
