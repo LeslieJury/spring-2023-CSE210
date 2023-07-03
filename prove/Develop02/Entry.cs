@@ -1,15 +1,13 @@
 public class Entry
 {
-    private string _prompt;
-    private string _response;
-    private int _dateText;
-    private string _delimeter;
+    public DateTime Date;
+    public string Prompt;
+    public string Text;
 
-    public Entry(string prompt, string response, int dateText, string delimeter)
+    public void Display()
     {
-        _prompt = prompt;
-        _response = response;
-        _dateText = dateText;
-        _delimeter = delimeter;
+        Console.WriteLine("Date: " + Date.ToString("yyyy-MM-dd"));
+        Console.WriteLine("Prompt: " + Prompt);
+        Console.WriteLine("Text: " + Text);
     }
 }

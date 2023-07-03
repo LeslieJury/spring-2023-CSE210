@@ -42,6 +42,6 @@ class Program
             num_guess = (Convert.ToInt32(your_guess)); //Type cast it to be an integer
 
         }
-        Console.WriteLine("Congratulations! You guessed correctly!")
+        Console.WriteLine("Congratulations! You guessed correctly!");
     }
 }
