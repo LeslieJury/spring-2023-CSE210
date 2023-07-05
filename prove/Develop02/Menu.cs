@@ -6,4 +6,15 @@ public class Menu
     };
 
 
+    // Display function updated after first submission.
+    public void Display()
+    {
+        int i = 0;
+        foreach(string menuItem in defaultMenu)
+        {
+            Console.WriteLine($"{i++}{menuItem}");
+        }
+    }
+
+
 }

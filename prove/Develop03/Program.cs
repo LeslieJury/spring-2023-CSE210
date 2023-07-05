@@ -11,6 +11,8 @@ class Program
             scripture.HideRandomWord();
             scripture.Display();
         }
+
+        Reference first = new Reference("Alma", 6, 4, 5);
     }
 
 

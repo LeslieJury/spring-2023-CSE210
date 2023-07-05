@@ -20,7 +20,13 @@ public class Program
         {
             Console.WriteLine(menu);
             Console.WriteLine("\nSelect which you'd like: ");
+            menu.Display();
             string userInput = Console.ReadLine();
+
+            if (userInput == "i")
+            {
+                journal.Write();
+            }
 
             
 

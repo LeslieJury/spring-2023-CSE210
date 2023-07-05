@@ -15,7 +15,6 @@ public class Reference
 
     public string Display()
     {
-        Console.WriteLine("You're displaying!");
         return "";
     }
 }
