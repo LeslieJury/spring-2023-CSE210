@@ -1,11 +1,19 @@
-
-class Comment
+public class Comment
 {
-    string author = "";
-    string text = "";
-}
+    // Declaring Variables
+    public string _userName;
+    public string _comment;
 
-static void newComment()
-{
-    
+
+    public Comment()
+    {
+        string userName = _userName;
+        string comment = _comment;
+    }
+
+    // Method
+    public void displayComment()
+    {
+        Console.WriteLine($"\n@{_userName}'s comment: {_comment}");
+    }
 }
