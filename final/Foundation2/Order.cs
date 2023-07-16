@@ -53,9 +53,12 @@ public class Order
         return twoDecimal;
     }
 
+
     public void addProduct(string name, int quantity, double price, string id)
     {
+        // Price is having issues with its data type right now.
         Product product = new Product(name, quantity, price, id);
         _productList.Add(product);
+
     }
 }
