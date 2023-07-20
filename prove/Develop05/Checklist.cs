@@ -43,6 +43,6 @@ public class ChecklistGoal: Goal
     public override string getString()
     {
         string goalType = GetType().Name;
-        return ($"{goalType}||{_goalName}||{_goalDescription}||{_basePoints}||{_bonusPoints}||{_goalNumMax}||{_goalCounter}");
+        return ($"{goalType}:{_goalName}:{_goalDescription}:{_basePoints}:{_bonusPoints}:{_goalNumMax}:{_goalCounter}");
     }
 }

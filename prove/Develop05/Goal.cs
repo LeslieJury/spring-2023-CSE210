@@ -3,11 +3,17 @@ using System;
 public class Goal
 {
     protected int _basePoints;
+
     protected int _pointsEarned;
+
     protected string _goalName;
+
     protected string _goalDescription;
+
     protected int _timesCompleted;
+
     protected bool _complete = false;
+
 
     public Goal()
     {
@@ -30,27 +36,24 @@ public class Goal
         _goalDescription = goalDescription;
         _basePoints = basePoints;
     }
+    public virtual string showGoals()
+    {
+        return ($"{_goalName}: ({_goalDescription})");
+    }
+    public virtual string showGoalName()
+    {
+        return _goalName;
+    }
 
     public virtual int recordEvent()
     {
        return _basePoints;
     }
 
-    public virtual string showGoals()
-    {
-        return ($"{_goalName}: ({_goalDescription})");
-    }
-
     public bool getComplete()
     {
         return _complete;
     }
-
-    public virtual string showGoalName()
-    {
-        return _goalName;
-    }
-
 
     public virtual string getString()
     {

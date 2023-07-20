@@ -3,23 +3,27 @@ using System.IO;
 
 public class SaveLoad
 {
-    public void SaveToFile(string filename, List<Goal> _goalList, int totalPoints)
+    public void save(string filename, List<Goal> _goalList, int totalPoints)
     {
-        using (StreamWriter outputFile = new StreamWriter(filename))
+
+        using (StreamWriter file = new StreamWriter(filename))
         {
-            outputFile.WriteLine(totalPoints);
+            file.WriteLine(totalPoints);
+
             foreach (Goal goal in _goalList)
             {
-                outputFile.WriteLine(goal.getString());
+                file.WriteLine(goal.getString());
             }
 
         }
     }
 
-    public List<Goal> LoadFile(string filename) 
+    public List<Goal> load(string filename) 
     {
         List<Goal> goals = new List<Goal>();
+
         string[] lines = File.ReadAllLines(filename);
+        
         foreach (string line in lines)
         {   
             string[] data = line.Split(":");
@@ -44,8 +48,7 @@ public class SaveLoad
                     goals.Add(goal);
                     break;
                 }
-        }
-        
+        } 
         return goals;
     }
 
