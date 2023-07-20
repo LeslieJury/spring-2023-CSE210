@@ -2,21 +2,25 @@ using System;
 
 public class Goal
 {
-    // Member Variables for base class
-    protected int _timesCompleted;
-    protected string _goalName;
-    protected string _goalDescription;
     protected int _basePoints;
     protected int _pointsEarned;
+    protected string _goalName;
+    protected string _goalDescription;
+    protected int _timesCompleted;
     protected bool _complete = false;
 
     public Goal()
     {
-        Console.WriteLine("Ready to make a new goal? Perfect!\nWhat is the name of your goal?: ");
+        Console.WriteLine("What is the name of your new goal?: ");
+
         _goalName = Console.ReadLine();
-        Console.WriteLine("\nWhat is a short description of it?: ");
+        
+        Console.WriteLine("\nNow give me a short description of it: ");
+        
         _goalDescription = Console.ReadLine();
-        Console.WriteLine("\nWhat is the amount of points associated with this goal?: ");
+        
+        Console.WriteLine("\nHow many points is this goal worth?: ");
+        
         _basePoints = int.Parse(Console.ReadLine());
     }
 
@@ -27,39 +31,31 @@ public class Goal
         _basePoints = basePoints;
     }
 
-    public virtual int RecordEvent()
+    public virtual int recordEvent()
     {
        return _basePoints;
     }
 
-    public virtual string ShowGoals()
+    public virtual string showGoals()
     {
-        return ($"[{GetCompleteChar()}] {_goalName} ({_goalDescription})");
+        return ($"{_goalName}: ({_goalDescription})");
     }
 
-    public char GetCompleteChar()
-    {
-        if(_complete)
-            return 'X';
-        else
-            return ' ';
-    }
-
-    public bool GetComplete()
+    public bool getComplete()
     {
         return _complete;
     }
 
-    public virtual string ShowGoalName()
+    public virtual string showGoalName()
     {
         return _goalName;
     }
 
 
-    public virtual string GetStringd()
+    public virtual string getString()
     {
         string goalType = GetType().Name;
-        return ($"{goalType}||{_goalName}||{_goalDescription}||{_basePoints}");
+        return ($"{goalType}: {_goalName}: {_goalDescription}: {_basePoints}");
     }
 
     
