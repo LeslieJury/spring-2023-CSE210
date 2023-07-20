@@ -22,7 +22,7 @@ public class SaveLoad
         string[] lines = File.ReadAllLines(filename);
         foreach (string line in lines)
         {   
-            string[] data = line.Split("||");
+            string[] data = line.Split(":");
                 switch(data[0])
                 {               
                     case "SimpleGoal":
